@@ -2,6 +2,8 @@
 
 This custom integration allows you to monitor your comma.ai devices (EON, comma three, etc.) in Home Assistant.
 
+<img width="339" height="160" alt="image" src="https://github.com/user-attachments/assets/5504fcac-6d2d-402d-98b0-fa7031f440bf" />
+
 ## Features
 
 - **Device Tracking**: Track the GPS location of your comma.ai device on the map
