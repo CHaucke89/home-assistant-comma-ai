@@ -22,7 +22,7 @@ class CommaAPIClient:
         """Initialize the API client."""
         self.jwt_token = jwt_token
         self.session = session
-        self.base_url = "https://api.commadotai.com"
+        self.base_url = "https://api.konik.ai"
 
     async def _request(
         self,

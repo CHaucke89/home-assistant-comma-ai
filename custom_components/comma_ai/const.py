@@ -11,7 +11,7 @@ PLATFORMS = [Platform.SENSOR, Platform.DEVICE_TRACKER]
 
 CONF_JWT_TOKEN: Final = "jwt_token"
 
-API_BASE_URL: Final = "https://api.commadotai.com"
+API_BASE_URL: Final = "https://api.konik.ai"
 
 # Update interval in seconds
 UPDATE_INTERVAL: Final = 60
