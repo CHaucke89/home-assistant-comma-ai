@@ -1,6 +1,7 @@
 # comma.ai Home Assistant Integration
 
 This custom integration allows you to monitor your comma.ai devices (EON, comma three, etc.) in Home Assistant.
+This is a slightly modified vesion of the original integration that uses the konik.ai server rather than comma's.
 
 <img width="339" height="160" alt="image" src="https://github.com/user-attachments/assets/5504fcac-6d2d-402d-98b0-fa7031f440bf" />
 
@@ -14,21 +15,24 @@ This custom integration allows you to monitor your comma.ai devices (EON, comma 
 1. Open HACS store
     - If you don't have HACS installed, follow [these instructions](https://www.hacs.xyz/docs/use/)
 2. In the top right, click the three dots, and click "Custom Repositories"
-3. Add `https://github.com/bscholer/home-assistant-comma-ai`, then close the modal
+3. Add `https://github.com/CHaucke89/home-assistant-comma-ai`, then close the modal
 4. Search for `comma.ai` in the HACS store. Open `comma.ai`, and click "Download"
 5. Restart Home Assistant
 6. Go to Settings → Devices & Services → Add Integration
 7. Search for "comma.ai"
-8. Enter your JWT token (get it from [jwt.comma.ai](https://jwt.comma.ai))
+8. Enter your JWT token (instructions below)
 
 ## Configuration
 
 The integration is configured through the UI. You only need to provide your JWT token from comma.ai.
 
 ### Initial Setup
-1. Get your JWT token from [jwt.comma.ai](https://jwt.comma.ai)
-2. Add the integration in Settings → Devices & Services
-3. Enter your JWT token
+1. The Konik JWT can be found by logging in to [stable.konik.ai](https://stable.konik.ai) and opening
+   the Developer tools (F12 or right click anywhere -> Inspect in most browsers) and going to the
+   "Application" tab. There should be a Key/Value table with one of the keys being "authorization".
+   The JWT is the value associated with authorization.
+3. Add the integration in Settings → Devices & Services
+4. Enter your JWT token
 
 ### Updating Your JWT Token
 
@@ -37,7 +41,7 @@ JWT tokens expire after 90 days. To update your token:
 1. Go to Settings → Devices & Services
 2. Find the comma.ai integration
 3. Click the ⋮ menu → "Reconfigure"
-4. Enter your new JWT token from [jwt.comma.ai](https://jwt.comma.ai)
+4. Enter your new JWT token from [stable.konik.ai](https://stable.konik.ai)
 5. Click Submit
 
 The integration will reload with the new token while preserving all your data and configuration.
@@ -80,12 +84,12 @@ For each comma.ai device, the following entities will be created:
 
 ## API Information
 
-This integration uses the comma.ai public API documented at [api.comma.ai](https://api.comma.ai/).
+This integration uses the konik.ai public API documented at [api.konik.ai](https://api.konik.ai/).
 
 ## Troubleshooting
 
 If you encounter issues:
-1. Check that your JWT token is valid at [jwt.comma.ai](https://jwt.comma.ai)
+1. Check that your JWT token is valid at [stable.konik.ai](https://stable.konik.ai)
 2. Check the Home Assistant logs for error messages
 3. Ensure your device is online and connected to comma servers
 
